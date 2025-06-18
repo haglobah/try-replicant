@@ -14,4 +14,4 @@ node_modules/
 .nrepl-port
 .lsp/
 .shadow-cljs/
-.
+resources/
