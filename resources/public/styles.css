@@ -1,0 +1,10 @@
+.cell {
+    aspect-ratio: 1 / 1;
+    border-radius: 6%;
+    border: none;
+    display: block;
+    flex: 1 1 0%;
+    outline: none;
+    position: relative;
+    width: 100%;
+}
