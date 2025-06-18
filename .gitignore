@@ -1,0 +1,17 @@
+.DS_Store
+.idea
+.projectile
+*.log
+tmp/
+
+result*
+
+node_modules/
+
+.clj-kondo/
+.cpcache/
+.calva/
+.nrepl-port
+.lsp/
+.shadow-cljs/
+.
