@@ -1,10 +1,28 @@
 (ns tic-tac-toe.ui)
 
-(defn render-cell [{:keys [content]}]
+(defn render-cell [{:keys [content
+                           on-click
+                           dim?
+                           highlight?
+                           clickable?]}]
   [:button.cell
+   {:on {:click on-click}
+    :class (cond-> []
+             dim? (conj "cell-dim")
+             highlight? (conj "cell-highlight")
+             clickable? (conj "clickable"))}
    (when content
      [:div.cell-content
+      {:replicant/mounting {:class "transparent"}
+       :replicant/unmounting {:class "transparent"}}
       content])])
+
+(defn render-board [{:keys [rows]}]
+  [:div.board
+   (for [row rows]
+     [:div.row
+      (for [cell row]
+        (render-cell cell))])])
 
 (def mark-x
   [:svg {:xmlns "http://www.w3.org/2000/svg"
